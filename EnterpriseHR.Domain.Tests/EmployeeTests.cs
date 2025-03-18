@@ -11,11 +11,10 @@ public class EmployeeServiceTests
     /// <summary>
     ///     Тест для проверки запроса 1: Получение сотрудников выбранного отдела.
     /// </summary>
-    /// <param name="department">Название отдела.</param>
-    [Theory]
-    [InlineData("Отдел разработки")]
-    public void GetEmployeesByDepartment_ShouldReturnCorrectEmployees(string department)
+    [Fact]
+    public void GetEmployeesByDepartment_ShouldReturnCorrectEmployees()
     {
+        var department = "Отдел разработки";
         var repo = new EmployeeInMemoryRepository();
         IList<Employee> result = repo.GetEmployeesByDepartment(department);
 

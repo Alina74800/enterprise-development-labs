@@ -24,7 +24,7 @@ public class Department
     public virtual List<EmployeeDepartment>? EmployeeDepartments { get; set; } = [];
 
     /// <summary>
-    ///     Список сотрудников, связанных с отделом
+    ///     Список сотрудников
     /// </summary>
     public virtual List<Employee>? Employees { get; set; }
 
