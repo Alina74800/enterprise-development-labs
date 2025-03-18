@@ -24,6 +24,11 @@ public class Department
     public virtual List<EmployeeDepartment>? EmployeeDepartments { get; set; } = [];
 
     /// <summary>
+    ///     Список сотрудников, связанных с отделом
+    /// </summary>
+    public virtual List<Employee>? Employees { get; set; }
+
+    /// <summary>
     ///     Перегрузка метода, возвращающего строковое представление объекта
     /// </summary>
     /// <returns>Название отдела</returns>

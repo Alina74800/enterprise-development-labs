@@ -104,7 +104,8 @@ public class Employee
     public virtual UnionMembership? UnionMembership { get; set; }
 
     /// <summary>
-    ///     Перегрузка метода, возвращающего строковое представление объекта
+    ///     Перегрузка метода, возвращающего строковое представление объекта.
+    ///     Возвращает ФИО сотрудника.
     /// </summary>
     /// <returns>ФИО сотрудника</returns>
     public override string ToString()
@@ -120,12 +121,30 @@ public class Employee
 /// </summary>
 public class EmployeeDepartment
 {
-    [Key] public required int Id { get; set; }
+    /// <summary>
+    ///     Уникальный идентификатор связи
+    /// </summary>
+    [Key] 
+    public required int Id { get; set; }
 
+    /// <summary>
+    ///     Идентификатор сотрудника
+    /// </summary>
     public int EmployeeId { get; set; }
+
+    /// <summary>
+    ///     Связанный объект сотрудника
+    /// </summary>
     public virtual Employee? Employee { get; set; }
 
+    /// <summary>
+    ///     Идентификатор отдела
+    /// </summary>
     public int DepartmentId { get; set; }
+
+    /// <summary>
+    ///     Связанный объект отдела
+    /// </summary>
     public virtual Department? Department { get; set; }
 }
 
@@ -134,13 +153,35 @@ public class EmployeeDepartment
 /// </summary>
 public class EmploymentHistory
 {
-    [Key] public required int Id { get; set; }
+    /// <summary>
+    ///     Уникальный идентификатор записи
+    /// </summary>
+    [Key] 
+    public required int Id { get; set; }
 
+    /// <summary>
+    ///     Идентификатор сотрудника
+    /// </summary>
     public int EmployeeId { get; set; }
+
+    /// <summary>
+    ///     Связанный объект сотрудника
+    /// </summary>
     public virtual Employee? Employee { get; set; }
 
+    /// <summary>
+    ///     Дата поступления на работу
+    /// </summary>
     public DateTime HireDate { get; set; }
+
+    /// <summary>
+    ///     Дата увольнения (если применимо)
+    /// </summary>
     public DateTime? TerminationDate { get; set; }
+
+    /// <summary>
+    ///     Занимаемая должность
+    /// </summary>
     public string? Position { get; set; }
 }
 
@@ -149,12 +190,30 @@ public class EmploymentHistory
 /// </summary>
 public class UnionMembership
 {
-    [Key] public required int Id { get; set; }
+    /// <summary>
+    ///     Уникальный идентификатор записи
+    /// </summary>
+    [Key] 
+    public required int Id { get; set; }
 
+    /// <summary>
+    ///     Идентификатор сотрудника
+    /// </summary>
     public int EmployeeId { get; set; }
+
+    /// <summary>
+    ///     Связанный объект сотрудника
+    /// </summary>
     public virtual Employee? Employee { get; set; }
 
+    /// <summary>
+    ///     Является ли сотрудник членом профсоюза
+    /// </summary>
     public bool IsMember { get; set; }
+
+    /// <summary>
+    ///     Список льгот, полученных сотрудником от профсоюза
+    /// </summary>
     public virtual List<UnionBenefit>? UnionBenefits { get; set; } = [];
 }
 
@@ -163,11 +222,29 @@ public class UnionMembership
 /// </summary>
 public class UnionBenefit
 {
-    [Key] public required int Id { get; set; }
+    /// <summary>
+    ///     Уникальный идентификатор записи
+    /// </summary>
+    [Key] 
+    public required int Id { get; set; }
 
+    /// <summary>
+    ///     Идентификатор членства в профсоюзе
+    /// </summary>
     public int UnionMembershipId { get; set; }
+
+    /// <summary>
+    ///     Связанный объект членства в профсоюзе
+    /// </summary>
     public virtual UnionMembership? UnionMembership { get; set; }
 
+    /// <summary>
+    ///     Дата получения льготы
+    /// </summary>
     public DateTime BenefitDate { get; set; }
+
+    /// <summary>
+    ///     Тип льготы
+    /// </summary>
     public string? BenefitType { get; set; }
 }

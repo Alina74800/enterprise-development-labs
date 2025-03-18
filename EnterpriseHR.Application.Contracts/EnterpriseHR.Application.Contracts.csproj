@@ -6,8 +6,7 @@
         <Nullable>enable</Nullable>
     </PropertyGroup>
 
-    <PropertyGroup>
-        <GenerateDocumentationFile>true</GenerateDocumentationFile>
-    </PropertyGroup>
-
+    <ItemGroup>
+        <ProjectReference Include="..\EnterpriseHR.Domain\EnterpriseHR.Domain.csproj"/>
+    </ItemGroup>
 </Project>

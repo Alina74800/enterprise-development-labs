@@ -8,6 +8,12 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{FAFA86DB-2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnterpriseHR.Domain.Tests", "EnterpriseHR.Domain.Tests\EnterpriseHR.Domain.Tests.csproj", "{99D96DAC-D105-43EA-859C-604ED8F31219}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnterpriseHR.Application.Contracts", "EnterpriseHR.Application.Contracts\EnterpriseHR.Application.Contracts.csproj", "{13728C72-7435-414A-A146-77557FC94178}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnterpriseHR.Application", "EnterpriseHR.Application\EnterpriseHR.Application.csproj", "{26F9C6D4-7CB1-49BD-B923-8AAC5D08491E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EnterpriseHR.Server", "EnterpriseHR.Server\EnterpriseHR.Server.csproj", "{5A5FD880-409A-494F-AA1A-ECAD9E01AFAF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
